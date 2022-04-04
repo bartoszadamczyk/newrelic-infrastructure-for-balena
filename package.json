@@ -1,0 +1,9 @@
+{
+  "name": "newrelic-infrastructure-for-balena",
+  "private": true,
+  "scripts": {
+    "build": "docker pull newrelic/infrastructure:latest && docker build -t bartoszadamczyk/newrelic-infrastructure-for-balena .",
+    "push": "docker push bartoszadamczyk/newrelic-infrastructure-for-balena",
+    "deploy": "npm run build && npm run push"
+  }
+}
