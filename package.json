@@ -2,8 +2,8 @@
   "name": "newrelic-infrastructure-for-balena",
   "private": true,
   "scripts": {
-    "build": "docker pull newrelic/infrastructure:latest && docker build -t bartoszadamczyk/newrelic-infrastructure-for-balena .",
-    "push": "docker push bartoszadamczyk/newrelic-infrastructure-for-balena",
-    "deploy": "npm run build && npm run push"
+    "create:builder": "docker buildx create --name mybuilder",
+    "use:builder": "docker buildx use mybuilder",
+    "deploy": "docker pull newrelic/infrastructure:latest && docker buildx build --push --platform linux/arm/v7,linux/arm64/v8,linux/amd64 --tag bartoszadamczyk/newrelic-infrastructure-for-balena ."
   }
 }
