@@ -1,6 +1,7 @@
-# newrelic-infrastructure-for-balena
+# New Relic Infrastructure Agent for Balena Cloud
 
-New Relic Infrastructure Agent Docker image for Balena Cloud
+Docker image with [New Relic Infrastructure Agent](https://github.com/newrelic/infrastructure-agent) working with Balena
+Cloud
 
 ## How to run?
 
@@ -33,9 +34,6 @@ Read more:
 - [Balena Cloud docker labels](https://www.balena.io/docs/reference/supervisor/docker-compose/#labels)
 - [Infrastructure agent settings](https://docs.newrelic.com/docs/infrastructure/install-infrastructure-agent/configuration/infrastructure-agent-configuration-settings/)
 - [newrelic-infra-template.yml.example](https://github.com/newrelic/infrastructure-agent/blob/master/assets/examples/infrastructure/newrelic-infra-template.yml.example)
-
-Bind mounts the host's Docker daemon socket to the container. This allows the agent to connect to the Engine API via the
-Docker daemon socket to collect the host's container data.
 
 ## Useful
 
